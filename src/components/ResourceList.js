@@ -15,7 +15,9 @@ function ResourceList({ resource }) {
   }, [resource]);
 
   const renderList = resources => {
-    return resources.map(resource => <li>{resource.title}</li>);
+    return resources.map(resource => (
+      <li key={resource.id}>{resource.title}</li>
+    ));
   };
 
   return <ul>{renderList(resources)}</ul>;
